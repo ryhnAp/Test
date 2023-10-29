@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="init project ta ca1 baloot">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/CommentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/CommodityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/model/UserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/comment.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/comments.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/commodities.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/commodity.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/ratingCommodity.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Commodity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Commodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Commodity.class" afterDir="false" />
-    </list>
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="init parameterized junit comment-commodity-user test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,7 +146,7 @@
       <workItem from="1697373397263" duration="4319000" />
       <workItem from="1697377820487" duration="910000" />
       <workItem from="1697378776049" duration="2182000" />
-      <workItem from="1697819831634" duration="49081000" />
+      <workItem from="1697819831634" duration="49501000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -172,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697385484368</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init parameterized junit comment-commodity-user test">
+      <created>1697929526227</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697929526227</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +183,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />
     <MESSAGE value="init project ta ca1 baloot" />
-    <option name="LAST_COMMIT_MESSAGE" value="init project ta ca1 baloot" />
+    <MESSAGE value="init parameterized junit comment-commodity-user test" />
+    <option name="LAST_COMMIT_MESSAGE" value="init parameterized junit comment-commodity-user test" />
   </component>
 </project>
