@@ -22,7 +22,6 @@ public class Commodity {
 
     private Map<String, Integer> userRate = new HashMap<>();
     private float initRate;
-    private boolean isInitRating = true;
 
     public void updateInStock(int amount) throws NotInStock {
         if ((this.inStock + amount) < 0)
@@ -31,12 +30,6 @@ public class Commodity {
     }
 
     public void addRate(String username, int score) {
-        if (isInitRating){
-            initRate = rating;
-            isInitRating = false;
-        }
-        if (score<0)
-            return;
         userRate.put(username, score);
         this.calcRating();
     }

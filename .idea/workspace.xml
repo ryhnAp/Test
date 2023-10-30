@@ -4,7 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="init parameterized junit comment-commodity-user test" />
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="clone ta version done">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito2_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_mockito_common_1_7_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_api_support_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_core_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_powermock_powermock_reflect_2_0_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_4_8_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_5_5_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application/BalootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application/BalootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/BuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/BuyListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/ProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/ProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DataParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DataParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/data/comments.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/data/comments.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/data/commodities.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/data/commodities.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/data/providers.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/data/providers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/defines/Errors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/defines/Errors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/AlreadyInBuyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/AlreadyInBuyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/CommodityIsNotInBuyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/CommodityIsNotInBuyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/IncorrectPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/IncorrectPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InsufficientCredit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InsufficientCredit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/InvalidCreditRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/InvalidCreditRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/MissingCommodityId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/MissingCommodityId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/MissingUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/MissingUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentCommodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentCommodity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NotExistentUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/NotInStock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/NotInStock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/UsernameAlreadyTaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/UsernameAlreadyTaken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Commodity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Baloot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Baloot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/BuyListItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/BuyListItem.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +94,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -55,19 +102,22 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\git projects\Test\src\main\java" />
       <recent name="F:\git projects\Test\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\git projects\Test\src\main" />
       <recent name="F:\git projects\Test" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="controllers" />
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="JUnit.CommoditiesControllerTest">
     <configuration name="CommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -78,6 +128,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="model" />
       <option name="MAIN_CLASS_NAME" value="model.CommentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommoditiesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.CommoditiesControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -128,6 +193,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommoditiesControllerTest" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.CommodityTest" />
         <item itemvalue="JUnit.CommentTest" />
@@ -147,6 +213,7 @@
       <workItem from="1697377820487" duration="910000" />
       <workItem from="1697378776049" duration="2182000" />
       <workItem from="1697819831634" duration="49501000" />
+      <workItem from="1698580879255" duration="11538000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -162,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697929526227</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clone ta version done">
+      <created>1698581093673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698581093673</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +258,28 @@
     <MESSAGE value="main" />
     <MESSAGE value="init project ta ca1 baloot" />
     <MESSAGE value="init parameterized junit comment-commodity-user test" />
-    <option name="LAST_COMMIT_MESSAGE" value="init parameterized junit comment-commodity-user test" />
+    <MESSAGE value="clone ta version done" />
+    <option name="LAST_COMMIT_MESSAGE" value="clone ta version done" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/CommentController.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
+    </SUITE>
   </component>
 </project>
