@@ -61,6 +61,7 @@ public class CommoditiesController {
         try {
             user = baloot.getUserById(username);
         } catch (NotExistentUser ignored) {
+            return new ResponseEntity<>(ignored.getMessage(), HttpStatus.BAD_REQUEST);
         }
 
         Comment comment = new Comment(commentId, user.getEmail(), user.getUsername(), Integer.parseInt(id), commentText);
