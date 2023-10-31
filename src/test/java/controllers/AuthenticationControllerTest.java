@@ -59,6 +59,8 @@ public class AuthenticationControllerTest {
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static final File AuthsJsonFile = new File("src/test/resources/authentications.json").getAbsoluteFile();
     private static final File AuthJsonFile = new File("src/test/resources/authentication.json").getAbsoluteFile();
+    private final String LOGIN_BASE_URL = "/login";
+    private final String SIGNUP_BASE_URL = "/signup";
     private static ArrayList<User> initUsers;
     private static User user;
 
@@ -105,7 +107,7 @@ public class AuthenticationControllerTest {
         input.put("password", "1234");
 
         doNothing().when(baloot).login("mahya", "1234");
-        MvcResult result = mockMvc.perform(post("/login")
+        MvcResult result = mockMvc.perform(post(LOGIN_BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(gson.toJson(input)))
                 .andExpect(status().isOk())
@@ -126,7 +128,7 @@ public class AuthenticationControllerTest {
         input.put("password", "none");
 
         doThrow(new NotExistentUser()).when(baloot).login("nonExistent", "none");
-        MvcResult result = mockMvc.perform(post("/login")
+        MvcResult result = mockMvc.perform(post(LOGIN_BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(gson.toJson(input)))
                 .andExpect(status().isNotFound())
@@ -147,7 +149,7 @@ public class AuthenticationControllerTest {
 
         doThrow(new IncorrectPassword()).when(baloot).login("user", "incorrect");
 
-        MvcResult result = mockMvc.perform(post("/login")
+        MvcResult result = mockMvc.perform(post(LOGIN_BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(gson.toJson(input)))
                 .andExpect(status().isUnauthorized())
@@ -170,7 +172,7 @@ public class AuthenticationControllerTest {
         input.put("password", "1234");
 
         doNothing().when(baloot).addUser(any(User.class));
-        MvcResult result = mockMvc.perform(post("/signup")
+        MvcResult result = mockMvc.perform(post(SIGNUP_BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(gson.toJson(input)))
                 .andExpect(status().isOk())
@@ -194,7 +196,7 @@ public class AuthenticationControllerTest {
         input.put("password", "1234");
 
         doThrow(new UsernameAlreadyTaken()).when(baloot).addUser(any(User.class));
-        MvcResult result = mockMvc.perform(post("/signup")
+        MvcResult result = mockMvc.perform(post(SIGNUP_BASE_URL)
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(gson.toJson(input)))
                 .andExpect(status().isBadRequest())
