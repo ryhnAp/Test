@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="clone ta version done">
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="commodity dirty double mock mvc test done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Commodity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Commodity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +170,7 @@
       <workItem from="1697378776049" duration="2182000" />
       <workItem from="1697819831634" duration="49501000" />
       <workItem from="1698580879255" duration="11538000" />
-      <workItem from="1698668569520" duration="5418000" />
+      <workItem from="1698668569520" duration="12144000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -194,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698581093673</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commodity dirty get/get-all/rate">
+      <created>1698680408423</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698680408460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +223,9 @@
     <MESSAGE value="init project ta ca1 baloot" />
     <MESSAGE value="init parameterized junit comment-commodity-user test" />
     <MESSAGE value="clone ta version done" />
-    <option name="LAST_COMMIT_MESSAGE" value="clone ta version done" />
+    <MESSAGE value="commodity dirty get/get-all/rate" />
+    <MESSAGE value="commodity dirty double mock mvc test done" />
+    <option name="LAST_COMMIT_MESSAGE" value="commodity dirty double mock mvc test done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -226,16 +234,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/controllers/CommentController.java</url>
           <line>26</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

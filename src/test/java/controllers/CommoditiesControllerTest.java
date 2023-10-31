@@ -1,5 +1,7 @@
 package controllers;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -9,7 +11,9 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import com.google.gson.reflect.TypeToken;
 import exceptions.NotExistentCommodity;
+import model.Comment;
 import model.Commodity;
+import model.User;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -32,9 +36,8 @@ import service.Baloot;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -153,8 +156,6 @@ class CommoditiesControllerTest {
            put("username", username);
         }};
 
-        Commodity cMock = Mockito.mock(Commodity.class);
-//        doNothing().when(cMock).addRate(username, newVote);
         when(baloot.getCommodityById(any())).thenReturn(c);
 
         //exercise
@@ -188,30 +189,142 @@ class CommoditiesControllerTest {
     }
 
 
+
     @Test
-    void getCommodity() {
+    void WHEN_user_add_comment_THEN_commodity_comments_changes() throws Exception {
+        //setup
+        String username = "ryhn";
+        Map<String, String> input = new HashMap<String, String>() {{
+            put("username", username);
+            put("comment", "perfect for sure!");
+        }};
+        User u = new User(username, "1234", "ryhn@gmail.com", "2001-08-29", "teh");
+        when(baloot.getUserById(any())).thenReturn(u);
+
+        //exercise
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+        String requestJson = ow.writeValueAsString(input);
+
+        MvcResult result = mockMvc.perform(post("/commodities/{id}/comment", "1")
+                        .content(requestJson)
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+
+        String content = result.getResponse().getContentAsString();
+        //verify
+        assertEquals("comment added successfully!", content);
+        //teardown
+
     }
 
     @Test
-    void rateCommodity() {
+    void WHEN_commodity_has_comments_THEN_get_comment_list_successfully() throws Exception {
+        //setup
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date temp = new Date();
+
+        Comment c1 = new Comment(1, "userEmail@gmail.com", "username", 8101, "text");
+        Comment c2 = new Comment(2, "userEmail@gmail.com", "username", 8101, "text");
+        Comment c3 = new Comment(3, "userEmail@gmail.com", "username", 8101, "text");
+        c1.setDate(dateFormat.format(temp));
+        c2.setDate(dateFormat.format(temp));
+        c3.setDate(dateFormat.format(temp));
+
+        ArrayList<Comment> cms = new ArrayList<>(Arrays.asList(c1, c2, c3));
+
+        when(baloot.getCommentsForCommodity(anyInt())).thenReturn(cms);
+
+        //exercise
+
+        MvcResult result = mockMvc.perform(get("/commodities/{id}/comment", "1")
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+
+        String content = result.getResponse().getContentAsString();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        ArrayList<Comment> actual = objectMapper.readValue(content, new TypeReference<ArrayList<Comment>>() {});        //verify
+        assertThat(actual)
+                .usingRecursiveComparison()
+                .isEqualTo(cms);
+        //teardown
+
     }
 
     @Test
-    void addCommodityComment() {
+    void WHEN_search_category_THEN_same_category_commodities_return() throws Exception {
+        //setup
+        Map<String, String> input = new HashMap<String, String>() {{
+            put("searchOption", "category");
+            put("searchValue", "phone");
+        }};
+        when(baloot.filterCommoditiesByName(any())).thenReturn(initCommodities);
+        when(baloot.filterCommoditiesByCategory(any())).thenReturn(initCommodities);
+        when(baloot.filterCommoditiesByProviderName(any())).thenReturn(initCommodities);
+
+        //exercise
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+        String requestJson = ow.writeValueAsString(input);
+
+        MvcResult result = mockMvc.perform(post("/commodities/search")
+                        .content(requestJson)
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+
+        String content = result.getResponse().getContentAsString();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        ArrayList<Commodity> actual = objectMapper.readValue(content, new TypeReference<ArrayList<Commodity>>() {});
+        //verify
+        assertThat(actual)
+                .usingRecursiveComparison()
+                .isEqualTo(initCommodities);
+        //teardown
+
     }
 
     @Test
-    void getCommodityComment() {
-    }
+    void WHEN_category_is_phone_THEN_suggest_phones() throws Exception {
+        //setup
 
-    @Test
-    void searchCommodities() {
-    }
+        when(baloot.getCommodityById(any())).thenReturn(initCommodities.get(0));
+        when(baloot.suggestSimilarCommodities(any())).thenReturn(new ArrayList<>(List.of(initCommodities.get(1))));
 
-    @Test
-    void getSuggestedCommodities() {
-    }
+        //exercise
 
+        MvcResult result = mockMvc.perform(get("/commodities/{id}/suggested", "1")
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isOk())
+                .andReturn();
+
+        String content = result.getResponse().getContentAsString();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        ArrayList<Commodity> actual = objectMapper.readValue(content, new TypeReference<ArrayList<Commodity>>() {});
+        //verify
+        assertThat(actual)
+                .usingRecursiveComparison()
+                .isEqualTo(new ArrayList<>(List.of(initCommodities.get(1))));
+        //teardown
+
+    }
     private static Stream<Arguments> populateCommodityRatingScenario(){
         ratingCommodity.addRate("ryhn", 5);
         Commodity addFirstUser = ratingCommodity;
