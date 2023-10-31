@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="commodity dirty double mock mvc test done">
-      <change afterPath="$PROJECT_DIR$/src/test/java/controllers/CommentControllerTest.java" afterDir="false" />
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="comment clean double mock mvc test and exception done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CommoditiesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommentControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <recent name="model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CommentControllerTest">
+  <component name="RunManager" selected="JUnit.CommoditiesControllerTest">
     <configuration name="CommentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -151,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommentControllerTest" />
         <item itemvalue="JUnit.CommoditiesControllerTest" />
+        <item itemvalue="JUnit.CommentControllerTest" />
         <item itemvalue="JUnit.UserTest" />
         <item itemvalue="JUnit.CommentTest" />
         <item itemvalue="JUnit.CommodityTest" />
@@ -172,7 +174,7 @@
       <workItem from="1697378776049" duration="2182000" />
       <workItem from="1697819831634" duration="49501000" />
       <workItem from="1698580879255" duration="11538000" />
-      <workItem from="1698668569520" duration="14355000" />
+      <workItem from="1698668569520" duration="25016000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -209,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698723468697</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="comment dirty double mock mvc test done">
+      <created>1698725753925</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698725753925</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,18 +243,9 @@
     <MESSAGE value="clone ta version done" />
     <MESSAGE value="commodity dirty get/get-all/rate" />
     <MESSAGE value="commodity dirty double mock mvc test done" />
-    <option name="LAST_COMMIT_MESSAGE" value="commodity dirty double mock mvc test done" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controllers/CommentController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="comment dirty double mock mvc test done" />
+    <MESSAGE value="comment clean double mock mvc test and exception done" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment clean double mock mvc test and exception done" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

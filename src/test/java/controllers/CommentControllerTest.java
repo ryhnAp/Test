@@ -7,10 +7,12 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import exceptions.InvalidCreditRange;
 import exceptions.NotExistentComment;
 import exceptions.NotExistentCommodity;
 import model.Comment;
 import model.Commodity;
+import model.User;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -41,6 +43,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -56,6 +59,10 @@ class CommentControllerTest {
     private static ArrayList<Comment> initComments;
     private static Comment tempComment;
 
+    private final String COMMENT_BASE_URL = "/comment/{id}/";
+    private final String SUCCESSFULLY_LIKED_FEEDBACK = "The comment was successfully liked!";
+    private final String SUCCESSFULLY_DISLIKED_FEEDBACK = "The comment was successfully disliked!";
+    private final String NOT_EXISTENT_COMMENT_FEEDBACK = "Comment does not exist.";
 
     @InjectMocks
     private CommentController commentController;
@@ -96,38 +103,96 @@ class CommentControllerTest {
     @MethodSource("populateUserNameVoteLikeDisLikeCount")
     void WHEN_users_vote_inverse_THEN_like_count_successfully_change(String username, String vote, Integer like, Integer dislike) throws Exception {
         //setup
-        String expected = Objects.equals(vote, "like") ? "The comment was successfully liked!" : "The comment was successfully disliked!";
-
+        String expected = Objects.equals(vote, "like") ? SUCCESSFULLY_LIKED_FEEDBACK : SUCCESSFULLY_DISLIKED_FEEDBACK;
+        Comment testingComment = initComments.get(0);
         Map<String, String> input = new HashMap<String, String>(){{
             put("username", username);
         }};
-
-        //exercise
-        initComments.get(0).addUserVote(username, vote);
-
-        when(baloot.getCommentById(anyInt())).thenReturn(initComments.get(0));
-
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
         ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
         String requestJson=ow.writeValueAsString(input);
 
-        String action = "/comment/{id}/" + vote;
+        when(baloot.getCommentById(anyInt())).thenReturn(testingComment);
 
-        MvcResult result = mockMvc.perform(post(action, String.valueOf(initComments.get(0).getId()))
+        //exercise
+        testingComment.addUserVote(username, vote);
+
+        String action = COMMENT_BASE_URL + vote;
+        MvcResult result = mockMvc.perform(post(action, String.valueOf(testingComment.getId()))
                         .content(requestJson)
                         .contentType(MediaType.APPLICATION_JSON))
 //                .andDo(print())
                 .andExpect(status().isOk())
                 .andReturn();
-
         String content = result.getResponse().getContentAsString();
+
         //verify
-        assertEquals(initComments.get(0).getLike(), like);
-        assertEquals(initComments.get(0).getDislike(), dislike);
+        assertEquals(testingComment.getLike(), like);
+        assertEquals(testingComment.getDislike(), dislike);
         assertEquals(expected, content);
         //teardown
+    }
 
+
+    @Test
+    void WHEN_comment_id_in_disliking_is_invalid_THEN_get_no_existent_comment() throws Exception {
+        //setup
+        String username = "ryhn";
+        String vote = "dislike";
+        Map<String, String> input = new HashMap<String, String>(){{
+            put("username", username);
+        }};
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+        String requestJson=ow.writeValueAsString(input);
+
+        doThrow(new NotExistentComment()).when(baloot).getCommentById(anyInt());
+
+        //exercise
+        String action = COMMENT_BASE_URL + vote;
+        MvcResult result = mockMvc.perform(post(action, "-1")
+                        .content(requestJson)
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isNotFound())
+                .andReturn();
+        String content = result.getResponse().getContentAsString();
+
+        //verify
+        assertTrue(content.contains(NOT_EXISTENT_COMMENT_FEEDBACK));
+        //teardown
+    }
+
+    @Test
+    void WHEN_comment_id_in_linking_is_invalid_THEN_get_no_existent_comment() throws Exception {
+        //setup
+        String username = "ryhn";
+        String vote = "like";
+        Map<String, String> input = new HashMap<String, String>(){{
+            put("username", username);
+        }};
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+        String requestJson=ow.writeValueAsString(input);
+
+        doThrow(new NotExistentComment()).when(baloot).getCommentById(anyInt());
+
+        //exercise
+        String action = COMMENT_BASE_URL + vote;
+        MvcResult result = mockMvc.perform(post(action, "-1")
+                        .content(requestJson)
+                        .contentType(MediaType.APPLICATION_JSON))
+//                .andDo(print())
+                .andExpect(status().isNotFound())
+                .andReturn();
+        String content = result.getResponse().getContentAsString();
+
+        //verify
+        assertTrue(content.contains(NOT_EXISTENT_COMMENT_FEEDBACK));
+        //teardown
     }
 
     private static Stream<Arguments> populateUserNameVoteLikeDisLikeCount(){
