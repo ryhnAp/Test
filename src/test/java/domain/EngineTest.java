@@ -4,6 +4,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import model.Comment;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -76,6 +77,60 @@ public class EngineTest {
 
     }
 
+
+    @Test
+    public void WHEN_get_average_order_quantity_by_customer_no_orders_THEN_returns_zero() {
+        // setup
+        Engine engine = new Engine();
+
+        // exercise
+        int averageQuantity = engine.getAverageOrderQuantityByCustomer(1);
+
+        // verify
+        assertEquals(0, averageQuantity);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideOrderHistory")
+    void WHEN_get_average_order_quantity_by_customer_with_order_history_THEN_Return_correct_average(Engine engine, int customer, double expectedAverage) {
+        // setup
+        int averageQuantity = engine.getAverageOrderQuantityByCustomer(customer);
+
+        // exercise
+        assertEquals(expectedAverage, averageQuantity);
+    }
+
+
+    private static Stream<Arguments> provideOrderHistory() {
+        Engine engineWithOrders = createEngineWithOrders();
+
+        return Stream.of(
+                Arguments.of(engineWithOrders, 1, 6),
+                Arguments.of(engineWithOrders, 2, 10)
+        );
+    }
+
+    private static Engine createEngineWithOrders() {
+        Engine engine = new Engine();
+
+        // Add orders to the orderHistory list
+        List<Order> orderHistory = engine.orderHistory;
+
+        orderHistory.add(createOrder(1, 1, 5));
+        orderHistory.add(createOrder(2, 1, 7));
+        orderHistory.add(createOrder(3, 2, 10));
+
+        return engine;
+    }
+
+    private static Order createOrder(int id, int customer, int quantity) {
+        Order order = new Order();
+        order.setId(id);
+        order.setCustomer(customer);
+        order.setQuantity(quantity);
+        return order;
+    }
+
     @ParameterizedTest
     @MethodSource("populateOrderHistoryScenario")
     void WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff(Engine e, int price, int expected){
@@ -118,7 +173,107 @@ public class EngineTest {
         //teardown
 
     }
+    //not parametrized
+    @Test
+    public void addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity() {
+        // setup
+        Engine engine = new Engine();
 
+        // Add orders to the engine
+
+        Order order1 = new Order();
+        order1.setId(1);
+        order1.setCustomer(1);
+        order1.setPrice(100);
+        order1.setQuantity(5);
+        engine.orderHistory.add(order1);
+
+        Order order2 = new Order();
+        order2.setId(2);
+        order2.setCustomer(1);
+        order2.setPrice(100);
+        order2.setQuantity(7);
+        engine.orderHistory.add(order2);
+
+        Order order3 = new Order();
+        order3.setId(3);
+        order3.setCustomer(2);
+        order3.setPrice(200);
+        order3.setQuantity(10);
+        engine.orderHistory.add(order3);
+
+        // Create a fraudulent order
+        Order fraudulentOrder = new Order();
+        fraudulentOrder.setId(4);
+        fraudulentOrder.setCustomer(1);
+        fraudulentOrder.setPrice(100);
+        fraudulentOrder.setQuantity(15);
+        // exercise
+        int fraudulentQuantity = engine.addOrderAndGetFraudulentQuantity(fraudulentOrder);
+
+        // verify
+        assertEquals(9, fraudulentQuantity);
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideOrderHistoryLast")
+    void WHEN_add_order_get_fraudulent_quantity_with_fraudulent_order_THEN_returns_fraudulent_quantity(List<Order> orderHistory, Order fraudulentOrder, int expectedFraudulentQuantity) {
+        // setup
+        engine.orderHistory.addAll(orderHistory);
+
+        // exercise
+        int fraudulentQuantity = engine.addOrderAndGetFraudulentQuantity(fraudulentOrder);
+
+        // verify
+        assertEquals(expectedFraudulentQuantity, fraudulentQuantity);
+    }
+
+    private static List<Object[]> provideOrderHistoryLast() {
+        List<Object[]> testCases = new ArrayList<>();
+
+        // Test Case 1: No order history
+        List<Order> orderHistory1 = new ArrayList<>();
+        Order fraudulentOrder1 = new Order();
+        fraudulentOrder1.setId(4);
+        fraudulentOrder1.setCustomer(1);
+        fraudulentOrder1.setPrice(100);
+        fraudulentOrder1.setQuantity(15);
+        int expectedFraudulentQuantity1 = 15;
+        testCases.add(new Object[]{orderHistory1, fraudulentOrder1, expectedFraudulentQuantity1});
+
+        // Test Case 2: Order history with valid orders
+        List<Order> orderHistory2 = new ArrayList<>();
+        Order order1 = new Order();
+        order1.setId(1);
+        order1.setCustomer(1);
+        order1.setPrice(100);
+        order1.setQuantity(5);
+        orderHistory2.add(order1);
+
+        Order order2 = new Order();
+        order2.setId(2);
+        order2.setCustomer(1);
+        order2.setPrice(100);
+        order2.setQuantity(7);
+        orderHistory2.add(order2);
+
+        Order order3 = new Order();
+        order3.setId(3);
+        order3.setCustomer(2);
+        order3.setPrice(200);
+        order3.setQuantity(10);
+        orderHistory2.add(order3);
+
+        Order fraudulentOrder2 = new Order();
+        fraudulentOrder2.setId(4);
+        fraudulentOrder2.setCustomer(1);
+        fraudulentOrder2.setPrice(100);
+        fraudulentOrder2.setQuantity(15);
+        int expectedFraudulentQuantity2 = 0;
+        testCases.add(new Object[]{orderHistory2, fraudulentOrder2, expectedFraudulentQuantity2});
+
+        return testCases;
+    }
     private static Stream<Arguments> populateOrderHistoryScenario(){
         Engine orderHistorySize0 = new Engine();
         Engine orderHistoryGet0 = new Engine();

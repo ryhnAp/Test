@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CA1</a> &gt; <a href="index.source.html" class="el_package">controllers</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package controllers;
+
+import service.Baloot;
+import model.User;
+import exceptions.InvalidCreditRange;
+import exceptions.NotExistentUser;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
+
+@RestController
+<span class="nc" id="L14">public class UserController {</span>
+<span class="nc" id="L15">    private Baloot baloot = Baloot.getInstance();</span>
+
+    public void setBaloot(Baloot baloot) {
+<span class="nc" id="L18">        this.baloot = baloot;</span>
+<span class="nc" id="L19">    }</span>
+    @GetMapping(value = &quot;/users/{id}&quot;)
+    public ResponseEntity&lt;User&gt; getUser(@PathVariable String id) {
+        try {
+<span class="nc" id="L23">            User user = baloot.getUserById(id);</span>
+<span class="nc" id="L24">            return new ResponseEntity&lt;&gt;(user, HttpStatus.OK);</span>
+<span class="nc" id="L25">        } catch (NotExistentUser e) {</span>
+<span class="nc" id="L26">            return new ResponseEntity&lt;&gt;(null, HttpStatus.NOT_FOUND);</span>
+        }
+    }
+
+    @PostMapping(value = &quot;/users/{id}/credit&quot;)
+    public ResponseEntity&lt;String&gt; addCredit(@PathVariable String id, @RequestBody Map&lt;String, String&gt; input) {
+        try {
+<span class="nc" id="L33">            float credit = Float.parseFloat(input.get(&quot;credit&quot;));</span>
+<span class="nc" id="L34">            baloot.getUserById(id).addCredit(credit);</span>
+<span class="nc" id="L35">            return new ResponseEntity&lt;&gt;(&quot;credit added successfully!&quot;, HttpStatus.OK);</span>
+<span class="nc" id="L36">        } catch (InvalidCreditRange e) {</span>
+<span class="nc" id="L37">            return new ResponseEntity&lt;&gt;(e.getMessage(), HttpStatus.BAD_REQUEST);</span>
+<span class="nc" id="L38">        } catch (NotExistentUser e) {</span>
+<span class="nc" id="L39">            return new ResponseEntity&lt;&gt;(e.getMessage(), HttpStatus.NOT_FOUND);</span>
+<span class="nc" id="L40">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L41">            return new ResponseEntity&lt;&gt;(&quot;Please enter a valid number for the credit amount.&quot;</span>
+                    , HttpStatus.BAD_REQUEST);
+        }
+
+
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

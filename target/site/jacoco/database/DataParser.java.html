@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DataParser.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CA1</a> &gt; <a href="index.source.html" class="el_package">database</a> &gt; <span class="el_source">DataParser.java</span></div><h1>DataParser.java</h1><pre class="source lang-java linenums">package database;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import model.Comment;
+import model.Commodity;
+import model.Provider;
+import model.User;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class DataParser {
+<span class="fc" id="L18">    private final ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="fc" id="L19">    private final String dataPath = &quot;src/main/java/database/data/&quot;;</span>
+    Database database;
+
+<span class="fc" id="L22">    public DataParser(Database database) {</span>
+<span class="fc" id="L23">        this.database = database;</span>
+<span class="fc" id="L24">    }</span>
+
+    public void getUsersList() throws IOException {
+<span class="fc" id="L27">        String filePath = dataPath + &quot;users.json&quot;;</span>
+<span class="fc" id="L28">        String usersString = new String(Files.readAllBytes(Paths.get(filePath)));</span>
+
+<span class="fc" id="L30">        List&lt;User&gt; userList = objectMapper.readValue(usersString, new TypeReference&lt;&gt;() {</span>
+        });
+<span class="fc" id="L32">        database.setUsers((ArrayList&lt;User&gt;) userList);</span>
+<span class="fc" id="L33">    }</span>
+
+    public void getProvidersList() throws IOException {
+<span class="fc" id="L36">        String filePath = dataPath + &quot;providers.json&quot;;</span>
+<span class="fc" id="L37">        String providersString = new String(Files.readAllBytes(Paths.get(filePath)));</span>
+
+<span class="fc" id="L39">        List&lt;Provider&gt; providerList = objectMapper.readValue(providersString, new TypeReference&lt;&gt;() {</span>
+        });
+<span class="fc" id="L41">        database.setProviders((ArrayList&lt;Provider&gt;) providerList);</span>
+<span class="fc" id="L42">    }</span>
+
+    public void getCommoditiesList() throws IOException {
+<span class="fc" id="L45">        String filePath = dataPath + &quot;commodities.json&quot;;</span>
+<span class="fc" id="L46">        String commoditiesString = new String(Files.readAllBytes(Paths.get(filePath)));</span>
+
+<span class="fc" id="L48">        List&lt;Commodity&gt; commodityList = objectMapper.readValue(commoditiesString, new TypeReference&lt;&gt;() {</span>
+        });
+<span class="fc" id="L50">        database.setCommodities((ArrayList&lt;Commodity&gt;) commodityList);</span>
+<span class="fc" id="L51">    }</span>
+
+    public void getCommentsList() throws IOException {
+<span class="fc" id="L54">        String filePath = dataPath + &quot;comments.json&quot;;</span>
+<span class="fc" id="L55">        String commentsString = new String(Files.readAllBytes(Paths.get(filePath)));</span>
+
+<span class="fc" id="L57">        List&lt;Comment&gt; commentsList = objectMapper.readValue(commentsString, new TypeReference&lt;&gt;() {</span>
+        });
+<span class="fc" id="L59">        database.setComments((ArrayList&lt;Comment&gt;) commentsList);</span>
+
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        for (Comment comment : commentsList)</span>
+<span class="fc" id="L62">            comment.setId(commentsList.indexOf(comment));</span>
+<span class="fc" id="L63">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

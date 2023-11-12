@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="updated with moxeed changes">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/order1-1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/order1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/order2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/order3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +33,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Wnfi0KC5YlMh632Bs4vPAI2tOD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,51 +80,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.EngineTest">
-    <configuration name="CommentControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers" />
-      <option name="MAIN_CLASS_NAME" value="controllers.CommentControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.CommentTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommoditiesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers" />
-      <option name="MAIN_CLASS_NAME" value="controllers.CommoditiesControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EngineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -139,17 +95,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="model.*" />
+          <option name="PATTERN" value="domain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="model" />
-      <option name="MAIN_CLASS_NAME" value="model.UserTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
+      <option name="METHOD_NAME" value="addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity(java.util.List,domain.Order,int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
+      <option name="METHOD_NAME" value="addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
+      <option name="METHOD_NAME" value="addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1(domain.Engine,domain.Order,domain.Order)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain" />
+      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
+      <option name="METHOD_NAME" value="getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -164,10 +169,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.EngineTest" />
-        <item itemvalue="JUnit.CommoditiesControllerTest" />
-        <item itemvalue="JUnit.CommentTest" />
-        <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.CommentControllerTest" />
+        <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1)" />
+        <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1" />
+        <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity" />
+        <item itemvalue="JUnit.EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +273,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />
@@ -284,6 +288,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="updated with moxeed changes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero.ic" NAME="EngineTest.WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero Coverage Results" MODIFIED="1699795356317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity Coverage Results" MODIFIED="1699803049094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1 Coverage Results" MODIFIED="1699804363284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity__1_.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1) Coverage Results" MODIFIED="1699805745270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff.ic" NAME="EngineTest.WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff Coverage Results" MODIFIED="1699795335607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest.ic" NAME="EngineTest Coverage Results" MODIFIED="1699805753190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity.ic" NAME="EngineTest.WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity Coverage Results" MODIFIED="1699795349051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_testGetAverageOrderQuantityByCustomer.ic" NAME="EngineTest.testGetAverageOrderQuantityByCustomer Coverage Results" MODIFIED="1699795240069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero.ic" NAME="EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero Coverage Results" MODIFIED="1699802225886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>controllers.*</FILTER>
     </SUITE>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">CA1</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package model;
+
+import exceptions.CommodityIsNotInBuyList;
+import exceptions.InsufficientCredit;
+import exceptions.InvalidCreditRange;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.HashMap;
+import java.util.Map;
+
+@Getter
+<span class="pc" id="L14">@Setter</span>
+<span class="fc" id="L15">@NoArgsConstructor</span>
+public class User {
+<span class="fc" id="L17">    private String username;</span>
+<span class="fc" id="L18">    private String password;</span>
+<span class="fc" id="L19">    private String email;</span>
+<span class="fc" id="L20">    private String birthDate;</span>
+<span class="fc" id="L21">    private String address;</span>
+<span class="fc" id="L22">    private float credit;</span>
+
+<span class="pc" id="L24">    private Map&lt;Integer, Integer&gt; commoditiesRates = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L25">    private Map&lt;String, Integer&gt; buyList = new HashMap&lt;&gt;();</span>
+<span class="fc" id="L26">    private Map&lt;String, Integer&gt; purchasedList = new HashMap&lt;&gt;();</span>
+
+<span class="fc" id="L28">    public User(String username, String password, String email, String birthDate, String address) {</span>
+<span class="fc" id="L29">        this.username = username;</span>
+<span class="fc" id="L30">        this.password = password;</span>
+<span class="fc" id="L31">        this.email = email;</span>
+<span class="fc" id="L32">        this.birthDate = birthDate;</span>
+<span class="fc" id="L33">        this.address = address;</span>
+<span class="fc" id="L34">    }</span>
+
+    public void addCredit(float amount) throws InvalidCreditRange {
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if (amount &lt; 0)</span>
+<span class="fc" id="L38">            throw new InvalidCreditRange();</span>
+
+<span class="fc" id="L40">        this.credit += amount;</span>
+<span class="fc" id="L41">    }</span>
+
+    public void withdrawCredit(float amount) throws InsufficientCredit {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (amount &gt; this.credit)</span>
+<span class="fc" id="L45">            throw new InsufficientCredit();</span>
+
+<span class="fc" id="L47">        this.credit -= amount;</span>
+<span class="fc" id="L48">    }</span>
+
+    public void addBuyItem(Commodity commodity) {
+<span class="fc" id="L51">        String id = commodity.getId();</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (this.buyList.containsKey(id)) {</span>
+<span class="fc" id="L53">            int existingQuantity = this.buyList.get(id);</span>
+<span class="fc" id="L54">            this.buyList.put(id, existingQuantity + 1);</span>
+<span class="fc" id="L55">        } else</span>
+<span class="fc" id="L56">            this.buyList.put(id, 1);</span>
+<span class="fc" id="L57">    }</span>
+
+    public void addPurchasedItem(String id, int quantity) {
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (this.purchasedList.containsKey(id)) {</span>
+<span class="fc" id="L61">            int existingQuantity = this.purchasedList.get(id);</span>
+<span class="fc" id="L62">            this.purchasedList.put(id, existingQuantity + quantity);</span>
+<span class="fc" id="L63">        } else</span>
+<span class="fc" id="L64">            this.purchasedList.put(id, quantity);</span>
+<span class="fc" id="L65">    }</span>
+
+    public void removeItemFromBuyList(Commodity commodity) throws CommodityIsNotInBuyList {
+<span class="fc" id="L68">        String id = commodity.getId();</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if (this.buyList.containsKey(id)) {</span>
+<span class="fc" id="L70">            int existingQuantity = this.buyList.get(id);</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">            if (existingQuantity == 1)</span>
+<span class="fc" id="L72">                this.buyList.remove(commodity.getId());</span>
+            else
+<span class="fc" id="L74">                this.buyList.put(id, existingQuantity - 1);</span>
+<span class="fc" id="L75">        } else</span>
+<span class="fc" id="L76">            throw new CommodityIsNotInBuyList();</span>
+<span class="fc" id="L77">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
