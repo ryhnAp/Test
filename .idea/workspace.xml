@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="updated with moxeed changes">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,6 +273,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />
@@ -287,11 +288,19 @@
     <MESSAGE value="updated with moxeed changes" />
     <option name="LAST_COMMIT_MESSAGE" value="updated with moxeed changes" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/domain/EngineTest.java</url>
+          <line>239</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero.ic" NAME="EngineTest.WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero Coverage Results" MODIFIED="1699795356317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>domain.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity Coverage Results" MODIFIED="1699803049094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1 Coverage Results" MODIFIED="1699804363284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -300,23 +309,26 @@
     <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity__1_.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1) Coverage Results" MODIFIED="1699805745270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff.ic" NAME="EngineTest.WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff Coverage Results" MODIFIED="1699795335607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Test$EngineTest_testGetAverageOrderQuantityByCustomer.ic" NAME="EngineTest.testGetAverageOrderQuantityByCustomer Coverage Results" MODIFIED="1699795240069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest.ic" NAME="EngineTest Coverage Results" MODIFIED="1699805753190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity Coverage Results" MODIFIED="1699803049094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity.ic" NAME="EngineTest.WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity Coverage Results" MODIFIED="1699795349051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_testGetAverageOrderQuantityByCustomer.ic" NAME="EngineTest.testGetAverageOrderQuantityByCustomer Coverage Results" MODIFIED="1699795240069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>domain.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest_getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero.ic" NAME="EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero Coverage Results" MODIFIED="1699802225886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>controllers.*</FILTER>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff.ic" NAME="EngineTest.WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff Coverage Results" MODIFIED="1699795335607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest.ic" NAME="EngineTest Coverage Results" MODIFIED="1699805753190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
     </SUITE>
   </component>
 </project>

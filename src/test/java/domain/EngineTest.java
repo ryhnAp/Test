@@ -133,7 +133,7 @@ public class EngineTest {
 
     @ParameterizedTest
     @MethodSource("populateOrderHistoryScenario")
-    void WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff(Engine e, int price, int expected){
+    void WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff(Engine e, int price, int expected) {
         //setup
         //exercise
         int actual = e.getQuantityPatternByPrice(price);
@@ -143,11 +143,12 @@ public class EngineTest {
     }
 
     @org.junit.jupiter.api.Test
-    void WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity(){
+    void WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
         //setup
+        Engine e = new Engine();
         int expected = order1.getQuantity();
         //exercise
-        int actual = engine.getCustomerFraudulentQuantity(order1);
+        int actual = e.getCustomerFraudulentQuantity(order1);
         //verify
         assertEquals(expected, actual);
         //teardown
@@ -155,7 +156,7 @@ public class EngineTest {
     }
 
     @org.junit.jupiter.api.Test
-    void WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero(){
+    void WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero() {
         //setup
         Engine history = new Engine(); //diff(50) !=  currentOrder.quantity(100) - previous.quantity(150)
         history.orderHistory.add(order1);
@@ -173,6 +174,7 @@ public class EngineTest {
         //teardown
 
     }
+
     //not parametrized
     @Test
     public void addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity() {
@@ -228,6 +230,17 @@ public class EngineTest {
         assertEquals(expectedFraudulentQuantity, fraudulentQuantity);
     }
 
+    @ParameterizedTest
+    @MethodSource("populateOrderFraudulentQuantity")
+    void populateOrderFraudulentQuantity(Engine e, Order o, int expected) {
+        //setup
+        //exercise
+        int actual = e.addOrderAndGetFraudulentQuantity(o);
+        //verify
+        assertEquals(expected, actual);
+        //teardown
+    }
+
     private static List<Object[]> provideOrderHistoryLast() {
         List<Object[]> testCases = new ArrayList<>();
 
@@ -274,7 +287,29 @@ public class EngineTest {
 
         return testCases;
     }
-    private static Stream<Arguments> populateOrderHistoryScenario(){
+
+    private static Stream<Arguments> populateOrderFraudulentQuantity() {
+        Order o = new Order();
+        o.setId(4);
+        o.setCustomer(1);
+        o.setPrice(100);
+        o.setQuantity(100);
+        Engine equalNewHistoryQuantity = new Engine();
+        equalNewHistoryQuantity.orderHistory.add(order1);
+        equalNewHistoryQuantity.orderHistory.add(order1);
+        Engine avgMoreQuantity = new Engine();
+        avgMoreQuantity.orderHistory.add(order1);
+        avgMoreQuantity.orderHistory.add(order1_1);
+        avgMoreQuantity.orderHistory.add(order2);
+        avgMoreQuantity.orderHistory.add(order3);
+        avgMoreQuantity.orderHistory.add(order1);
+        return Stream.of(
+                Arguments.of(equalNewHistoryQuantity, o, 0),
+                Arguments.of(avgMoreQuantity, o, 0)
+        );
+    }
+
+    private static Stream<Arguments> populateOrderHistoryScenario() {
         Engine orderHistorySize0 = new Engine();
         Engine orderHistoryGet0 = new Engine();
         orderHistoryGet0.orderHistory.add(order1);
