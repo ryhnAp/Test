@@ -78,13 +78,13 @@ public class EngineTest {
     }
 
 
-    @Test
-    public void WHEN_get_average_order_quantity_by_customer_no_orders_THEN_returns_zero() {
+    @org.junit.jupiter.api.Test
+    void GIVEN_no_orders_WHEN_get_average_order_quantity_by_customer_THEN_return_zero() {
         // setup
-        Engine engine = new Engine();
+        Engine e = new Engine();
 
         // exercise
-        int averageQuantity = engine.getAverageOrderQuantityByCustomer(1);
+        int averageQuantity = e.getAverageOrderQuantityByCustomer(1);
 
         // verify
         assertEquals(0, averageQuantity);
@@ -92,43 +92,12 @@ public class EngineTest {
 
     @ParameterizedTest
     @MethodSource("provideOrderHistory")
-    void WHEN_get_average_order_quantity_by_customer_with_order_history_THEN_Return_correct_average(Engine engine, int customer, double expectedAverage) {
+    void GIVEN_order_history_WHEN_get_average_order_quantity_by_customer_THEN_return_correct_average(Engine engine, int customer, double expectedAverage) {
         // setup
-        int averageQuantity = engine.getAverageOrderQuantityByCustomer(customer);
-
         // exercise
+        int averageQuantity = engine.getAverageOrderQuantityByCustomer(customer);
+        // verify
         assertEquals(expectedAverage, averageQuantity);
-    }
-
-
-    private static Stream<Arguments> provideOrderHistory() {
-        Engine engineWithOrders = createEngineWithOrders();
-
-        return Stream.of(
-                Arguments.of(engineWithOrders, 1, 6),
-                Arguments.of(engineWithOrders, 2, 10)
-        );
-    }
-
-    private static Engine createEngineWithOrders() {
-        Engine engine = new Engine();
-
-        // Add orders to the orderHistory list
-        List<Order> orderHistory = engine.orderHistory;
-
-        orderHistory.add(createOrder(1, 1, 5));
-        orderHistory.add(createOrder(2, 1, 7));
-        orderHistory.add(createOrder(3, 2, 10));
-
-        return engine;
-    }
-
-    private static Order createOrder(int id, int customer, int quantity) {
-        Order order = new Order();
-        order.setId(id);
-        order.setCustomer(customer);
-        order.setQuantity(quantity);
-        return order;
     }
 
     @ParameterizedTest
@@ -143,7 +112,7 @@ public class EngineTest {
     }
 
     @org.junit.jupiter.api.Test
-    void WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
+    void GIVEN_no_history_WHEN_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
         //setup
         Engine e = new Engine();
         int expected = order1.getQuantity();
@@ -156,9 +125,9 @@ public class EngineTest {
     }
 
     @org.junit.jupiter.api.Test
-    void WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero() {
+    void GIVEN_avg_history_more_than_order_quantity_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
         //setup
-        Engine history = new Engine(); //diff(50) !=  currentOrder.quantity(100) - previous.quantity(150)
+        Engine history = new Engine();
         history.orderHistory.add(order1);
         history.orderHistory.add(order1_1);
         history.orderHistory.add(order2);
@@ -168,16 +137,15 @@ public class EngineTest {
         int expected = 0;
         //exercise
         int actual = history.getCustomerFraudulentQuantity(order1);
+
         //verify
-
         assertEquals(expected, actual);
-        //teardown
 
+        //teardown
     }
 
-    //not parametrized
-    @Test
-    public void addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity() {
+    @org.junit.jupiter.api.Test
+    void GIVEN_fraudulent_order_WHEN_add_order_and_get_fraudulent_quantity_THEN_returns_fraudulent_quantity() {
         // setup
         Engine engine = new Engine();
 
@@ -219,7 +187,7 @@ public class EngineTest {
 
     @ParameterizedTest
     @MethodSource("provideOrderHistoryLast")
-    void WHEN_add_order_get_fraudulent_quantity_with_fraudulent_order_THEN_returns_fraudulent_quantity(List<Order> orderHistory, Order fraudulentOrder, int expectedFraudulentQuantity) {
+    void GIVEN_fraudulent_order_WHEN_add_order_get_fraudulent_quantity_THEN_returns_fraudulent_quantity(List<Order> orderHistory, Order fraudulentOrder, int expectedFraudulentQuantity) {
         // setup
         engine.orderHistory.addAll(orderHistory);
 
@@ -232,13 +200,78 @@ public class EngineTest {
 
     @ParameterizedTest
     @MethodSource("populateOrderFraudulentQuantity")
-    void populateOrderFraudulentQuantity(Engine e, Order o, int expected) {
+    void GIVEN_quantity0_scenario_WHEN_get_fraudulent_quantity_THEN_returns_related_quantity(Engine e, Order o, int expected) {
         //setup
         //exercise
         int actual = e.addOrderAndGetFraudulentQuantity(o);
         //verify
         assertEquals(expected, actual);
         //teardown
+    }
+
+    private static Order createOrder(int id, int customer, int quantity) {
+        Order order = new Order();
+        order.setId(id);
+        order.setCustomer(customer);
+        order.setQuantity(quantity);
+        return order;
+    }
+
+    private static Engine createEngineWithOrders() {
+        Engine engine = new Engine();
+
+        // Add orders to the orderHistory list
+        List<Order> orderHistory = engine.orderHistory;
+
+        orderHistory.add(createOrder(1, 1, 5));
+        orderHistory.add(createOrder(2, 1, 7));
+        orderHistory.add(createOrder(3, 2, 10));
+
+        return engine;
+    }
+
+    private static Stream<Arguments> provideOrderHistory() {
+        Engine engineWithOrders = createEngineWithOrders();
+
+        return Stream.of(
+                Arguments.of(engineWithOrders, 1, 6),
+                Arguments.of(engineWithOrders, 2, 10)
+        );
+    }
+
+    private static Stream<Arguments> populateOrderHistoryScenario() {
+        Engine orderHistorySize0 = new Engine();
+        Engine orderHistoryGet0 = new Engine();
+        orderHistoryGet0.orderHistory.add(order1);
+        Engine orderHistoryGet0LoopContinueOnce = new Engine();
+        orderHistoryGet0LoopContinueOnce.orderHistory.add(order1);
+        orderHistoryGet0LoopContinueOnce.orderHistory.add(order1_1);
+        Engine currentPriceNotMatchContinue = new Engine(); //curr = 150
+        currentPriceNotMatchContinue.orderHistory.add(order1);
+        currentPriceNotMatchContinue.orderHistory.add(order1_1);
+        currentPriceNotMatchContinue.orderHistory.add(order2);
+        Engine diff0ReturnNonZeroDiff = currentPriceNotMatchContinue;
+        Engine diffNon0SubtractEqualReturnNonZeroDiff = new Engine(); //diff(50) ==  currentOrder.quantity(200) - previous.quantity(150)
+        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order1);
+        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order1_1);
+        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order2);
+        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order3);
+        Engine diffNon0IsSubtractNotEqualReturnNonZeroDiff = new Engine(); //diff(50) !=  currentOrder.quantity(100) - previous.quantity(150)
+        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1);
+        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1_1);
+        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order2);
+        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order3);
+        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1);
+        return Stream.of(
+                Arguments.of(orderHistorySize0, 100, 0),
+                Arguments.of(orderHistoryGet0, 100, 0),
+                Arguments.of(orderHistoryGet0LoopContinueOnce, 100, 0),
+                Arguments.of(currentPriceNotMatchContinue, 50, 0),
+                Arguments.of(diff0ReturnNonZeroDiff, 100, 50),
+                Arguments.of(diffNon0SubtractEqualReturnNonZeroDiff, 100, 50),
+                Arguments.of(diffNon0IsSubtractNotEqualReturnNonZeroDiff, 100, 0)
+
+        );
     }
 
     private static List<Object[]> provideOrderHistoryLast() {
@@ -306,41 +339,6 @@ public class EngineTest {
         return Stream.of(
                 Arguments.of(equalNewHistoryQuantity, o, 0),
                 Arguments.of(avgMoreQuantity, o, 0)
-        );
-    }
-
-    private static Stream<Arguments> populateOrderHistoryScenario() {
-        Engine orderHistorySize0 = new Engine();
-        Engine orderHistoryGet0 = new Engine();
-        orderHistoryGet0.orderHistory.add(order1);
-        Engine orderHistoryGet0LoopContinueOnce = new Engine();
-        orderHistoryGet0LoopContinueOnce.orderHistory.add(order1);
-        orderHistoryGet0LoopContinueOnce.orderHistory.add(order1_1);
-        Engine currentPriceNotMatchContinue = new Engine(); //curr = 150
-        currentPriceNotMatchContinue.orderHistory.add(order1);
-        currentPriceNotMatchContinue.orderHistory.add(order1_1);
-        currentPriceNotMatchContinue.orderHistory.add(order2);
-        Engine diff0ReturnNonZeroDiff = currentPriceNotMatchContinue;
-        Engine diffNon0SubtractEqualReturnNonZeroDiff = new Engine(); //diff(50) ==  currentOrder.quantity(200) - previous.quantity(150)
-        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order1);
-        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order1_1);
-        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order2);
-        diffNon0SubtractEqualReturnNonZeroDiff.orderHistory.add(order3);
-        Engine diffNon0IsSubtractNotEqualReturnNonZeroDiff = new Engine(); //diff(50) !=  currentOrder.quantity(100) - previous.quantity(150)
-        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1);
-        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1_1);
-        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order2);
-        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order3);
-        diffNon0IsSubtractNotEqualReturnNonZeroDiff.orderHistory.add(order1);
-        return Stream.of(
-                Arguments.of(orderHistorySize0, 100, 0),
-                Arguments.of(orderHistoryGet0, 100, 0),
-                Arguments.of(orderHistoryGet0LoopContinueOnce, 100, 0),
-                Arguments.of(currentPriceNotMatchContinue, 50, 0),
-                Arguments.of(diff0ReturnNonZeroDiff, 100, 50),
-                Arguments.of(diffNon0SubtractEqualReturnNonZeroDiff, 100, 50),
-                Arguments.of(diffNon0IsSubtractNotEqualReturnNonZeroDiff, 100, 0)
-
         );
     }
 }
