@@ -8,8 +8,8 @@ CA1,database,Database,36,46,0,0,8,9,8,7,8,7
 CA1,application,BalootApplication,10,0,0,0,4,0,2,0,2,0
 CA1,utils,BuyListItem,23,0,0,0,7,0,5,0,5,0
 CA1,service,Baloot,559,28,68,2,124,13,56,4,22,3
-CA1,domain,Order,12,36,2,2,4,5,5,7,3,7
-CA1,domain,Engine,5,139,1,23,1,39,1,16,0,5
+CA1,domain,Order,11,37,1,3,4,5,4,8,3,7
+CA1,domain,Engine,0,144,0,24,0,40,0,17,0,5
 CA1,controllers,CommoditiesController,28,182,3,1,6,38,3,9,0,9
 CA1,controllers,CommentController,0,72,0,0,0,18,0,4,0,4
 CA1,controllers,ProviderController,39,0,0,0,10,0,4,0,4,0
@@ -28,8 +28,8 @@ CA1,exceptions,IncorrectPassword,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,UsernameAlreadyTaken,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,InsufficientCredit,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,NotExistentUser,0,4,0,0,0,2,0,1,0,1
-CA1,exceptions,NotInStock,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,NotExistentProvider,4,0,0,0,2,0,1,0,1,0
+CA1,exceptions,NotInStock,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,MissingCommodityId,4,0,0,0,2,0,1,0,1,0
 CA1,exceptions,InvalidCreditRange,0,4,0,0,0,2,0,1,0,1
 CA1,exceptions,AlreadyInBuyList,4,0,0,0,2,0,1,0,1,0

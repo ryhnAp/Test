@@ -73,8 +73,8 @@ public class Engine {
         }
 
 <span class="fc" id="L75">        var quantity = getCustomerFraudulentQuantity(order);</span>
-<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (quantity == 0) {</span>
-<span class="nc" id="L77">            quantity = getQuantityPatternByPrice(order.price);</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">        if (quantity == 0) {</span>
+<span class="fc" id="L77">            quantity = getQuantityPatternByPrice(order.price);</span>
         }
 
 <span class="fc" id="L80">        orderHistory.add(order);</span>
