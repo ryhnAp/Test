@@ -28,6 +28,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -171,6 +172,8 @@ class CommoditiesControllerTest {
 
         String content = result.getResponse().getContentAsString();
         //verify
+        assertNull(commoditiesController.getCommodity(commodityId).getBody());
+        assertEquals(HttpStatus.NOT_FOUND, commoditiesController.getCommodity(commodityId).getStatusCode());
 
         //teardown
     }
