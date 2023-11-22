@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="jacoco?">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" afterDir="false" />
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="ca2 needed?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +96,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommoditiesControllerTest">
+  <component name="RunManager" selected="JUnit.UserControllerTest">
     <configuration name="AuthenticationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -148,18 +158,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domain.*" />
+          <option name="PATTERN" value="controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
-      <option name="METHOD_NAME" value="addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1(domain.Engine,domain.Order,domain.Order)" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="controllers" />
+      <option name="MAIN_CLASS_NAME" value="controllers.UserControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -173,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserControllerTest" />
         <item itemvalue="JUnit.CommoditiesControllerTest" />
         <item itemvalue="JUnit.AuthenticationControllerTest" />
         <item itemvalue="JUnit.EngineTest" />
         <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1)" />
-        <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity1" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +207,7 @@
       <workItem from="1699134616894" duration="159000" />
       <workItem from="1699134809817" duration="3021000" />
       <workItem from="1699689282349" duration="17563000" />
-      <workItem from="1700503261991" duration="4532000" />
+      <workItem from="1700503261991" duration="12869000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -284,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699813205595</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ca2 needed?">
+      <created>1700580284065</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700580284065</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +332,8 @@
     <MESSAGE value="addOrderAndGetFraudulentQuantity quantity 0 coverage" />
     <MESSAGE value="clean and last check done" />
     <MESSAGE value="jacoco?" />
-    <option name="LAST_COMMIT_MESSAGE" value="jacoco?" />
+    <MESSAGE value="ca2 needed?" />
+    <option name="LAST_COMMIT_MESSAGE" value="ca2 needed?" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero.ic" NAME="EngineTest.WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero Coverage Results" MODIFIED="1699795356317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

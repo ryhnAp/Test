@@ -57,6 +57,14 @@ import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(MockitoExtension.class)
 @WebAppConfiguration
 class CommoditiesControllerTest {
+
+    @InjectMocks
+    private CommoditiesController commoditiesController;
+    @Mock
+    private Baloot baloot;
+
+    private MockMvc mockMvc;
+
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static final File commoditiesJsonFile = new File("src/test/resources/commodities.json").getAbsoluteFile();
     private static final File ratingCommodityJsonFile = new File("src/test/resources/ratingCommodity.json").getAbsoluteFile();
@@ -71,14 +79,6 @@ class CommoditiesControllerTest {
     private final String SEARCH_API_URL = "/search";
     private final String SUGGESTED_API_URL = "/suggested";
     private final String COMMENT_ADD_SUCCESSFULLY_FEEDBACK = "comment added successfully!";
-
-    @InjectMocks
-    private CommoditiesController commoditiesController;
-    @Mock
-    private Baloot baloot;
-
-    private MockMvc mockMvc;
-
     @BeforeAll
     public static void setup(){
         try {
