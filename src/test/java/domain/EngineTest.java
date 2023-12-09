@@ -18,10 +18,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Stream;
 
 import com.google.gson.Gson;
@@ -112,16 +109,248 @@ public class EngineTest {
     }
 
     @org.junit.jupiter.api.Test
+    void GIVEN_no_history_order_quantity_0_WHEN_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+        orderWith0Quantity.setQuantity(0);
+        int expected = orderWith0Quantity.getQuantity();
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_no_history_order_quantity_1_WHEN_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+        orderWith0Quantity.setQuantity(1);
+        int expected = orderWith0Quantity.getQuantity();
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_no_history_negative_order_quantity_1_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+        orderWith0Quantity.setQuantity(-1);
+        int expected = 0;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_negative_quantity_history_order_quantity_0_WHEN_get_customer_fraudulent_quantity_THEN_return_diff_quantity() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(-1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(0);
+
+        int expected = 1;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_negative_quantity_history_negative_order_quantity_2_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(-1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(-2);
+
+        int expected = 0;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_negative_quantity_history_negative_order_quantity_1_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(-1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(-1);
+
+        int expected = 0;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_negative_quantity_history_order_quantity_1_WHEN_get_customer_fraudulent_quantity_THEN_return_diff_quantity() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(-1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(1);
+
+        int expected = 2;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_one_quantity_history_order_quantity_0_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(0);
+
+        int expected = 0;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GIVEN_one_quantity_history_order_quantity_1_WHEN_get_customer_fraudulent_quantity_THEN_return_zero() {
+        //setup
+        Engine e = new Engine();
+        Order orderWith0Quantity = new Order();
+        orderWith0Quantity.setId(order1.getId());
+        orderWith0Quantity.setCustomer(order1.getCustomer());
+        orderWith0Quantity.setPrice(order1.getPrice());
+
+        Order orderWithNegQuantity = new Order();
+        orderWithNegQuantity.setId(order1.getId());
+        orderWithNegQuantity.setCustomer(order1.getCustomer());
+        orderWithNegQuantity.setPrice(order1.getPrice());
+        orderWithNegQuantity.setQuantity(1);
+        e.orderHistory.add(orderWithNegQuantity);
+        orderWith0Quantity.setQuantity(1);
+
+        int expected = 0;
+        int actual = e.getCustomerFraudulentQuantity(orderWith0Quantity);
+        assertEquals(expected, actual);
+    }
+
+    @org.junit.jupiter.api.Test
     void GIVEN_no_history_WHEN_get_customer_fraudulent_quantity_THEN_return_order_quantity() {
         //setup
         Engine e = new Engine();
         int expected = order1.getQuantity();
+
         //exercise
         int actual = e.getCustomerFraudulentQuantity(order1);
         //verify
         assertEquals(expected, actual);
         //teardown
 
+    }
+
+    Engine setNegativeQuantity(Engine e){
+        Engine negHistory = new Engine();
+        for (int i=0; i<e.orderHistory.size(); i++){
+            Order o = new Order();
+            o.setId(e.orderHistory.get(i).getId());
+            o.setCustomer(e.orderHistory.get(i).getCustomer());
+            o.setPrice(e.orderHistory.get(i).getPrice());
+            o.setQuantity(-1*e.orderHistory.get(i).getQuantity());
+            negHistory.orderHistory.add(o);
+        }
+        return negHistory;
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateFraudulentQuantity")
+    void GIVEN_diff_history_plus1_scenario_WHEN_get_customer_fraudulent_quantity_THEN_returns_related_quantity(Engine e, Order o) {
+        //setup
+        //exercise
+        Engine ne = setNegativeQuantity(e);
+        int funVal = ne.getAverageOrderQuantityByCustomer(o.getCustomer());
+        o.setQuantity(funVal+1);
+        int expected_ = o.getQuantity() - funVal;
+        int actual = ne.getCustomerFraudulentQuantity(o);
+        //verify
+        assertEquals(expected_, actual);
+        //teardown
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateFraudulentQuantity")
+    void GIVEN_diff_history_scenario_WHEN_get_customer_fraudulent_quantity_THEN_returns_related_quantity(Engine e, Order o) {
+        //setup
+        //exercise
+        Engine ne = setNegativeQuantity(e);
+        int funVal = ne.getAverageOrderQuantityByCustomer(o.getCustomer());
+        o.setQuantity(funVal);
+        int expected_ = o.getQuantity() - funVal;
+        int actual = ne.getCustomerFraudulentQuantity(o);
+        //verify
+        assertEquals(expected_, actual);
+        //teardown
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateFraudulentQuantity")
+    void GIVEN_diff_history_minus1_scenario_WHEN_get_customer_fraudulent_quantity_THEN_returns_related_quantity(Engine e, Order o) {
+        //setup
+        //exercise
+        Engine ne = setNegativeQuantity(e);
+        o.setQuantity(ne.getAverageOrderQuantityByCustomer(o.getCustomer())-1);
+        int expected_ = 0;
+        int actual = ne.getCustomerFraudulentQuantity(o);
+        //verify
+        assertEquals(expected_, actual);
+        //teardown
     }
 
     @org.junit.jupiter.api.Test
@@ -330,6 +559,11 @@ public class EngineTest {
         Engine equalNewHistoryQuantity = new Engine();
         equalNewHistoryQuantity.orderHistory.add(order1);
         equalNewHistoryQuantity.orderHistory.add(order1);
+        Engine avgLessQuantity = new Engine();
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
         Engine avgMoreQuantity = new Engine();
         avgMoreQuantity.orderHistory.add(order1);
         avgMoreQuantity.orderHistory.add(order1_1);
@@ -338,7 +572,35 @@ public class EngineTest {
         avgMoreQuantity.orderHistory.add(order1);
         return Stream.of(
                 Arguments.of(equalNewHistoryQuantity, o, 0),
+                Arguments.of(avgLessQuantity, o, 0),
                 Arguments.of(avgMoreQuantity, o, 0)
+        );
+    }
+
+    private static Stream<Arguments> populateFraudulentQuantity() {
+        Order o = new Order();
+        o.setId(4);
+        o.setCustomer(1);
+        o.setPrice(100);
+        o.setQuantity(-100);
+        Engine equalNewHistoryQuantity = new Engine();
+        equalNewHistoryQuantity.orderHistory.add(order1);
+        equalNewHistoryQuantity.orderHistory.add(order1);
+        Engine avgLessQuantity = new Engine();
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
+        avgLessQuantity.orderHistory.add(order1);
+        Engine avgMoreQuantity = new Engine();
+        avgMoreQuantity.orderHistory.add(order1);
+        avgMoreQuantity.orderHistory.add(order1_1);
+        avgMoreQuantity.orderHistory.add(order2);
+        avgMoreQuantity.orderHistory.add(order3);
+        avgMoreQuantity.orderHistory.add(order1);
+        return Stream.of(
+                Arguments.of(equalNewHistoryQuantity, o),
+                Arguments.of(avgLessQuantity, o),
+                Arguments.of(avgMoreQuantity, o)
         );
     }
 }

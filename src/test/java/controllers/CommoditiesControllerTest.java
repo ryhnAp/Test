@@ -20,8 +20,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.*;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -221,6 +220,22 @@ class CommoditiesControllerTest {
         assertEquals("rate added successfully!", content);
         //teardown
 
+    }
+
+    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    @DisplayName("Repeat!")
+    void testWithDifferentInput(RepetitionInfo repetitionInfo) {
+        int input = repetitionInfo.getCurrentRepetition();
+        int expectedResult = input * 2; // just an example
+        assertEquals(expectedResult, input*2);
+    }
+
+    @ParameterizedTest
+    @NullSource
+    @EmptySource
+    @ValueSource(strings = { " ", "   ", "\t", "\n" })
+    void nullEmptyAndBlankStrings(String text) {
+        assertTrue(text == null || text.trim().isEmpty());
     }
 
     @Test

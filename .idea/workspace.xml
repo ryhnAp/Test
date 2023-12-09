@@ -4,10 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="ca2 needed?">
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="ca5 3 survived mutation remains :.(">
+      <change afterPath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/AuthenticationControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Order.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/User.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/User.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-11-12T19-03-37_886.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-11-12T19-46-12_456.dumpstream" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-domain.EngineTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-domain.EngineTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommentTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommentTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommodityTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommodityTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.UserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.UserTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.AuthenticationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.AuthenticationControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommentControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.CommentControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommoditiesControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.CommoditiesControllerTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/domain.EngineTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/domain.EngineTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" afterDir="false" />
@@ -20,6 +64,7 @@
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +117,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -87,6 +132,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="domain" />
       <recent name="controllers" />
       <recent name="model" />
     </key>
@@ -96,37 +142,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserControllerTest">
-    <configuration name="AuthenticationControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers" />
-      <option name="MAIN_CLASS_NAME" value="controllers.AuthenticationControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommoditiesControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers" />
-      <option name="MAIN_CLASS_NAME" value="controllers.CommoditiesControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Maven.Mutation">
     <configuration name="EngineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -137,12 +153,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="domain" />
       <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
         <pattern>
@@ -151,27 +168,66 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
-      <option name="METHOD_NAME" value="addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity(java.util.List,domain.Order,int)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CA1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controllers" />
-      <option name="MAIN_CLASS_NAME" value="controllers.UserControllerTest" />
+      <option name="MAIN_CLASS_NAME" value="domain.OrderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Mutation" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="test" />
+                <option value="org.pitest:pitest-maven:mutationCoverage" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpeedMutation" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="-DwithHistory" />
+                <option value="test-compile" />
+                <option value="org.pitest:pitest-maven:mutationCoverage" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="BalootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="CA1" />
@@ -180,13 +236,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.EngineTest" />
+      <item itemvalue="Maven.Mutation" />
+      <item itemvalue="Maven.SpeedMutation" />
+      <item itemvalue="Spring Boot.BalootApplication" />
+      <item itemvalue="JUnit.OrderTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserControllerTest" />
-        <item itemvalue="JUnit.CommoditiesControllerTest" />
-        <item itemvalue="JUnit.AuthenticationControllerTest" />
+        <item itemvalue="JUnit.OrderTest" />
         <item itemvalue="JUnit.EngineTest" />
-        <item itemvalue="JUnit.EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +267,14 @@
       <workItem from="1699134616894" duration="159000" />
       <workItem from="1699134809817" duration="3021000" />
       <workItem from="1699689282349" duration="17563000" />
-      <workItem from="1700503261991" duration="12869000" />
+      <workItem from="1700503261991" duration="13385000" />
+      <workItem from="1700997805226" duration="1571000" />
+      <workItem from="1701247956240" duration="7467000" />
+      <workItem from="1702119217002" duration="3079000" />
+      <workItem from="1702131773203" duration="2709000" />
+      <workItem from="1702134557683" duration="9676000" />
+      <workItem from="1702146241381" duration="596000" />
+      <workItem from="1702146879345" duration="5917000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -300,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700580284065</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ca4 mock api test done">
+      <created>1700656758461</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700656758461</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +407,20 @@
     <MESSAGE value="clean and last check done" />
     <MESSAGE value="jacoco?" />
     <MESSAGE value="ca2 needed?" />
-    <option name="LAST_COMMIT_MESSAGE" value="ca2 needed?" />
+    <MESSAGE value="ca4 mock api test done" />
+    <MESSAGE value="ca5 3 survived mutation remains :.(" />
+    <option name="LAST_COMMIT_MESSAGE" value="ca5 3 survived mutation remains :.(" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/domain/Engine.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero.ic" NAME="EngineTest.WHEN_avg_history_in_get_customer_fraudulent_quantity_is_more_than_order_THEN_return_zero Coverage Results" MODIFIED="1699795356317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

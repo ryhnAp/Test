@@ -57,16 +57,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebAppConfiguration
 public class AuthenticationControllerTest {
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    private static final File AuthsJsonFile = new File("src/test/resources/authentications.json").getAbsoluteFile();
-    private static final File AuthJsonFile = new File("src/test/resources/authentication.json").getAbsoluteFile();
     private final String LOGIN_BASE_URL = "/login";
     private final String SIGNUP_BASE_URL = "/signup";
-    private static ArrayList<User> initUsers;
-    private static User user;
 
 
     @InjectMocks
-    private static AuthenticationController authenticationController;
+    private AuthenticationController authenticationController;
     @Mock
     private Baloot baloot;
 
@@ -83,17 +79,6 @@ public class AuthenticationControllerTest {
 
     @BeforeAll
     public static void setup() {
-        try {
-            String initJsonAuths = FileUtils.readFileToString(AuthsJsonFile);
-            initUsers = gson.fromJson(initJsonAuths, new TypeToken<ArrayList<User>>() {
-            }.getType());
-            String initJsonComment = FileUtils.readFileToString(AuthJsonFile);
-            user = gson.fromJson(initJsonComment, (Type) Comment.class);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 
     @AfterAll
