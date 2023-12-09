@@ -4,38 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="ca5 3 survived mutation remains :.(">
-      <change afterPath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" afterDir="false" />
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/AuthenticationControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/AuthenticationControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/CommoditiesControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/controllers/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Order.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/User.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/User.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/model/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-11-12T19-03-37_886.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2023-11-12T19-46-12_456.dumpstream" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" afterDir="false" />
@@ -50,21 +24,6 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +233,7 @@
       <workItem from="1702131773203" duration="2709000" />
       <workItem from="1702134557683" duration="9676000" />
       <workItem from="1702146241381" duration="596000" />
-      <workItem from="1702146879345" duration="5917000" />
+      <workItem from="1702146879345" duration="8368000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -374,7 +333,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700656758461</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="ca5 3 survived mutation remains :.(">
+      <created>1702153385943</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1702153385943</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,9 +381,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/domain/Engine.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/test/java/domain/OrderTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/domain/EngineTest.java</url>
+          <line>347</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
