@@ -30,7 +30,7 @@ jobs:
       - name: Test
         run: mvn -B test --file pom.xml
       - name: Mutation Coverage
-        run: mvn test-compile org.pitest:pitest-maven:mutationCoverage --file pom.xml
+        run: mvn clean install test org.pitest:pitest-maven:mutationCoverage -f pom.xml
       - uses: actions/upload-artifact@v3
         with:
           path: target/pit-reports
