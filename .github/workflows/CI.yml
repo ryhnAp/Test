@@ -25,10 +25,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Build
-        run: mvn -B package --file pom.xml
-      - name: Test
-        run: mvn -B test --file pom.xml
+      # - name: Build
+      #   run: mvn -B package --file pom.xml
+      # - name: Test
+      #   run: mvn -B test --file pom.xml
       - name: Mutation Coverage
         run: mvn clean install test org.pitest:pitest-maven:mutationCoverage -f pom.xml
       - uses: actions/upload-artifact@v3
