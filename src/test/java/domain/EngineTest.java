@@ -26,8 +26,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class EngineTest {
     private static Gson gson = new GsonBuilder().setPrettyPrinting().create();
@@ -35,6 +34,11 @@ public class EngineTest {
     private static final File order1_1JsonFile = new File("src/test/resources/order1-1.json").getAbsoluteFile();
     private static final File order2JsonFile = new File("src/test/resources/order2.json").getAbsoluteFile();
     private static final File order3JsonFile = new File("src/test/resources/order3.json").getAbsoluteFile();
+
+    private Engine engineM;
+    private Order order1M;
+    private List<Order> orderHistoryM;
+
 
     private static Engine engine;
     private static Order order1;
@@ -44,7 +48,12 @@ public class EngineTest {
 
     @BeforeEach
     public void setUp() {
-
+        engineM = new Engine();
+        order1M = new Order();
+        // Set up orderHistory as needed
+        orderHistoryM = new ArrayList<>();
+        // Add orderHistory data if required for testing average calculation
+        // e.g., orderHistory.add(someOrder);
     }
 
     @AfterEach
@@ -309,6 +318,104 @@ public class EngineTest {
         return negHistory;
     }
 
+    @org.junit.jupiter.api.Test
+    void given_empty_order_history_when_get_customer_average_quantity_then_return_zero() {
+        // Set orderHistory as empty
+        orderHistoryM.clear();
+        int actual = engineM.getAverageOrderQuantityByCustomer(order1M.getCustomer());
+        assertEquals(0, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void given_order_quantity_greater_than_average_when_get_customer_fraudulent_quantity_then_return_difference() {
+        // Set up order with quantity greater than average
+        Order order = new Order();
+        order.setCustomer(order1M.getCustomer());
+        order.setQuantity(10); // Set quantity greater than any calculated average
+        // Add necessary setup for order (ID, price, etc.)
+
+        int actual = engineM.getCustomerFraudulentQuantity(order);
+        assertEquals(order.getQuantity() - engineM.getAverageOrderQuantityByCustomer(order.getCustomer()), actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void given_order_quantity_equal_to_average_when_get_customer_fraudulent_quantity_then_exception() {
+        // Set up order with quantity equal to average
+        int customer = order1M.getCustomer();
+        int average = 5; // Set an average value for testing
+        // Add an order to history with quantity equal to the average for the specific customer
+        Order order = new Order();
+        order.setCustomer(customer);
+        order.setQuantity(average);
+        orderHistoryM.add(order);
+
+//        int actual = engine.getCustomerFraudulentQuantity(order);
+        assertThrows(ArithmeticException.class, ()->engine.getCustomerFraudulentQuantity(order));
+//        assertEquals(0, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void given_order_quantity_equal_to_average_when_get_customer_fraudulent_quantity_then_return_zero() {
+        // Set up order with quantity equal to average
+        int customer = order1M.getCustomer();
+        int average = 5; // Set an average value for testing
+        // Add an order to history with quantity equal to the average for the specific customer
+        Order order = new Order();
+        order.setCustomer(customer);
+        order.setQuantity(average);
+        order1M.setCustomer(customer);
+        order1M.setQuantity(average);
+        engineM.orderHistory.add(order);
+
+        int actual = engineM.getCustomerFraudulentQuantity(order1M);
+        assertEquals(0, actual);
+    }
+
+    @org.junit.jupiter.api.Test
+    void given_order_quantity_less_than_average_when_get_customer_fraudulent_quantity_then_return_zero() {
+        // Set up order with quantity less than average
+        int customer = order1M.getCustomer();
+        int average = 10; // Set an average value for testing
+        // Add an order to history with quantity less than the average for the specific customer
+        Order order = new Order();
+        order.setCustomer(customer);
+        order.setQuantity(average); // Set quantity less than the average for this customer
+        order1M.setCustomer(customer);
+        order1M.setQuantity(average-2);
+        engineM.orderHistory.add(order);
+
+        int actual = engineM.getCustomerFraudulentQuantity(order1M);
+        assertEquals(0, actual);
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateChangeMutation")
+    void GIVEN_nine_scenario_3_pos_base_neg_times_WHEN_add_order_and_get_THEN_returns_expected(Engine e, Order o, int expected) {
+        //setup
+        //exercise
+        int val;
+        if (expected == 0)
+            val = e.getQuantityPatternByPrice(o.getPrice());
+        else
+            val = expected;
+        int actual = e.addOrderAndGetFraudulentQuantity(o);
+        //verify
+        assertEquals(val, actual);
+        //teardown
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateChangeMutation")
+    void GIVEN_nine_scenario_3_pos_base_neg_times_WHEN_get_customer_fraudulent_quantity_THEN_returns_expected(Engine e, Order o, int expected) {
+        //setup
+        //exercise
+        int actual = e.getCustomerFraudulentQuantity(o);
+        //verify
+        assertEquals(expected, actual);
+        //teardown
+    }
+
+
     @ParameterizedTest
     @MethodSource("populateFraudulentQuantity")
     void GIVEN_diff_history_plus1_scenario_WHEN_get_customer_fraudulent_quantity_THEN_returns_related_quantity(Engine e, Order o) {
@@ -345,7 +452,8 @@ public class EngineTest {
         //setup
         //exercise
         Engine ne = setNegativeQuantity(e);
-        o.setQuantity(ne.getAverageOrderQuantityByCustomer(o.getCustomer())-1);
+        int funVal = ne.getAverageOrderQuantityByCustomer(o.getCustomer());
+        o.setQuantity(funVal-1);
         int expected_ = 0;
         int actual = ne.getCustomerFraudulentQuantity(o);
         //verify
@@ -603,4 +711,68 @@ public class EngineTest {
                 Arguments.of(avgMoreQuantity, o)
         );
     }
+
+    private static Stream<Arguments> populateChangeMutation() {
+
+        Engine avg0 = new Engine();
+        Engine avg0_ = new Engine();
+        Engine avg0__ = new Engine();
+        Engine avg1 = new Engine();
+        Engine avg1_ = new Engine();
+        Engine avg1__ = new Engine();
+        Engine avgNeg1 = new Engine();
+        Engine avgNeg1_ = new Engine();
+        Engine avgNeg1__ = new Engine();
+        Order plus1 = new Order();
+        plus1.setId(10);
+        plus1.setCustomer(1);
+        plus1.setPrice(100);
+        plus1.setQuantity(1);
+        Order plus1_ = new Order();
+        plus1_.setId(100);
+        plus1_.setCustomer(1);
+        plus1_.setPrice(100);
+        plus1_.setQuantity(1);
+        avg1.orderHistory.add(plus1);
+        avg1_.orderHistory.add(plus1);
+        avg1__.orderHistory.add(plus1);
+
+        Order minus1 = new Order();
+        minus1.setId(11);
+        minus1.setCustomer(1);
+        minus1.setPrice(100);
+        minus1.setQuantity(-1);
+        Order minus1_ = new Order();
+        minus1_.setId(111);
+        minus1_.setCustomer(1);
+        minus1_.setPrice(100);
+        minus1_.setQuantity(-1);
+        avgNeg1.orderHistory.add(minus1);
+        avgNeg1_.orderHistory.add(minus1);
+        avgNeg1__.orderHistory.add(minus1);
+
+        Order eq0 = new Order();
+        eq0.setId(12);
+        eq0.setCustomer(1);
+        eq0.setPrice(100);
+        eq0.setQuantity(0);
+        Order eq0_ = new Order();
+        eq0_.setId(12);
+        eq0_.setCustomer(1);
+        eq0_.setPrice(100);
+        eq0_.setQuantity(0);
+
+        return Stream.of(
+                Arguments.of(avg0, plus1, 1),
+                Arguments.of(avg0_, minus1, 0),
+                Arguments.of(avg0__, eq0_, 0),
+                Arguments.of(avg1, plus1_, 0),
+                Arguments.of(avg1_, minus1, 0),
+                Arguments.of(avg1__, eq0, 0),
+                Arguments.of(avgNeg1, plus1, 2),
+                Arguments.of(avgNeg1_, minus1_, 0),
+                Arguments.of(avgNeg1__, eq0, 1)
+        );
+    }
+
 }

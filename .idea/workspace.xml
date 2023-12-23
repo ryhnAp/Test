@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="">
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="1 survived mutation remains :.( from engine :(((">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/OrderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Engine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.java.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" afterDir="false" />
@@ -24,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +137,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Jacoco" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="Mutation" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -197,15 +226,16 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.EngineTest" />
+      <item itemvalue="JUnit.OrderTest" />
       <item itemvalue="Maven.Mutation" />
+      <item itemvalue="Maven.Jacoco" />
       <item itemvalue="Maven.SpeedMutation" />
       <item itemvalue="Spring Boot.BalootApplication" />
-      <item itemvalue="JUnit.OrderTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderTest" />
         <item itemvalue="JUnit.EngineTest" />
+        <item itemvalue="JUnit.OrderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +263,10 @@
       <workItem from="1702131773203" duration="2709000" />
       <workItem from="1702134557683" duration="9676000" />
       <workItem from="1702146241381" duration="596000" />
-      <workItem from="1702146879345" duration="8368000" />
+      <workItem from="1702146879345" duration="25978000" />
+      <workItem from="1702339389185" duration="3599000" />
+      <workItem from="1702475324171" duration="3003000" />
+      <workItem from="1702643762085" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -340,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702153385943</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="1 survived mutation remains :.( from engine :(((">
+      <created>1702156910356</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702156910356</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,20 +415,16 @@
     <MESSAGE value="ca2 needed?" />
     <MESSAGE value="ca4 mock api test done" />
     <MESSAGE value="ca5 3 survived mutation remains :.(" />
-    <option name="LAST_COMMIT_MESSAGE" value="ca5 3 survived mutation remains :.(" />
+    <MESSAGE value="1 survived mutation remains :.( from engine :(((" />
+    <option name="LAST_COMMIT_MESSAGE" value="1 survived mutation remains :.( from engine :(((" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/domain/OrderTest.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/domain/EngineTest.java</url>
-          <line>347</line>
-          <option name="timeStamp" value="3" />
+          <line>400</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

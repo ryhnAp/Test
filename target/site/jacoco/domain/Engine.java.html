@@ -10,7 +10,7 @@ public class Engine {
 <span class="fc" id="L10">        orderHistory = new ArrayList&lt;&gt;();</span>
 <span class="fc" id="L11">    }</span>
 
-    int getAverageOrderQuantityByCustomer(int customer) {
+    public int getAverageOrderQuantityByCustomer(int customer) {
 <span class="fc" id="L14">        var sum = 0;</span>
 <span class="fc" id="L15">        var count = 0;</span>
 
@@ -28,7 +28,7 @@ public class Engine {
 <span class="fc" id="L28">        return sum / count;</span>
     }
 
-    int getQuantityPatternByPrice(int price) {
+    public int getQuantityPatternByPrice(int price) {
 <span class="fc bfc" id="L32" title="All 2 branches covered.">        if (orderHistory.size() == 0) {</span>
 <span class="fc" id="L33">            return 0;</span>
         }
@@ -56,7 +56,7 @@ public class Engine {
 <span class="fc" id="L56">        return diff;</span>
     }
 
-    int getCustomerFraudulentQuantity(Order order) {
+    public int getCustomerFraudulentQuantity(Order order) {
 
 <span class="fc" id="L61">        var averageOrderQuantity = getAverageOrderQuantityByCustomer(order.customer);</span>
 
