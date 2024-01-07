@@ -105,7 +105,7 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Maven.Mutation">
+  <component name="RunManager" selected="Spring Boot.BalootApplication">
     <configuration name="EngineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
@@ -234,6 +234,8 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderTest" />
+        <item itemvalue="JUnit.EngineTest" />
         <item itemvalue="JUnit.EngineTest" />
         <item itemvalue="JUnit.OrderTest" />
       </list>
