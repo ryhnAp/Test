@@ -5,29 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="1 survived mutation remains :.( from engine :(((">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_yaml_2_14_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_ci_environment_9_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_core_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_expressions_16_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_gherkin_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_gherkin_messages_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_java_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_junit_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_cucumber_plugin_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_datatable_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_docstring_7_11_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_gherkin_26_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_html_formatter_20_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_junit_xml_formatter_0_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_messages_21_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_cucumber_tag_expressions_5_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_annotations_jakarta_2_2_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_core_jakarta_2_2_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_core_v3_swagger_models_jakarta_2_2_9.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_starter_common_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_starter_webmvc_api_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springdoc_springdoc_openapi_starter_webmvc_ui_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_swagger_ui_4_18_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/addCreditTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/removeItemFromBuyListTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/withdrawCreditTestRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/removeItemFromBuyList.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/cucumber/withdrawCredit.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-domain.EngineTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-domain.EngineTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommentTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommentTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommodityTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommodityTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.UserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-model.UserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.AuthenticationControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.AuthenticationControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommentControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.CommentControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommoditiesControllerTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/controllers.CommoditiesControllerTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/domain.EngineTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/domain.EngineTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CA1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/controllers/UserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -62,26 +74,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/mahya/Documents/CE/6",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\git projects\Test\src\test\resources" />
@@ -105,33 +105,84 @@
       <command value="mvn test" />
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BalootApplication">
-    <configuration name="EngineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: removeItemFromBuyList">
+    <configuration name="Feature: addCredit" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/cucumber/addCredit.feature" />
+      <option name="GLUE" value="behavior.add" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="CA1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: addCredit" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domain.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.EngineTest" />
-      <option name="METHOD_NAME" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: removeItemFromBuyList" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/cucumber/removeItemFromBuyList.feature" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="CA1" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: removeItemFromBuyList" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="addCreditTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.addCreditTestRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="removeItemFromBuyListTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CA1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="domain.*" />
+          <option name="PATTERN" value="runner.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="domain" />
-      <option name="MAIN_CLASS_NAME" value="domain.OrderTest" />
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.removeItemFromBuyListTestRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="withdrawCreditTestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CA1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.withdrawCreditTestRunner" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -225,19 +276,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.EngineTest" />
-      <item itemvalue="JUnit.OrderTest" />
+      <item itemvalue="Cucumber Java.Feature: removeItemFromBuyList" />
+      <item itemvalue="Cucumber Java.Feature: addCredit" />
+      <item itemvalue="JUnit.addCreditTestRunner" />
+      <item itemvalue="JUnit.removeItemFromBuyListTestRunner" />
+      <item itemvalue="JUnit.withdrawCreditTestRunner" />
       <item itemvalue="Maven.Mutation" />
       <item itemvalue="Maven.Jacoco" />
       <item itemvalue="Maven.SpeedMutation" />
-      <item itemvalue="Spring Boot.BalootApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderTest" />
-        <item itemvalue="JUnit.EngineTest" />
-        <item itemvalue="JUnit.EngineTest" />
-        <item itemvalue="JUnit.OrderTest" />
+        <item itemvalue="Cucumber Java.Feature: removeItemFromBuyList" />
+        <item itemvalue="Cucumber Java.Feature: addCredit" />
+        <item itemvalue="JUnit.addCreditTestRunner" />
+        <item itemvalue="JUnit.removeItemFromBuyListTestRunner" />
+        <item itemvalue="JUnit.withdrawCreditTestRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -398,7 +452,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main" />
@@ -441,19 +494,7 @@
     <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity__1_.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity (1) Coverage Results" MODIFIED="1699805745270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_testGetAverageOrderQuantityByCustomer.ic" NAME="EngineTest.testGetAverageOrderQuantityByCustomer Coverage Results" MODIFIED="1699795240069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>domain.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>controllers.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest_addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity.ic" NAME="EngineTest.addOrderAndGetFraudulentQuantity_WithFraudulentOrder_ReturnsFraudulentQuantity Coverage Results" MODIFIED="1699803049094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>domain.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity.ic" NAME="EngineTest.WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity Coverage Results" MODIFIED="1699795349051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>domain.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/Test$EngineTest_getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero.ic" NAME="EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero Coverage Results" MODIFIED="1699802225886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff.ic" NAME="EngineTest.WHEN_get_quantity_pattern_by_price_THEN_return_valid_diff Coverage Results" MODIFIED="1699795335607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -461,6 +502,18 @@
     </SUITE>
     <SUITE FILE_PATH="coverage/Test$EngineTest.ic" NAME="EngineTest Coverage Results" MODIFIED="1699805753190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity.ic" NAME="EngineTest.WHEN_no_history_in_get_customer_fraudulent_quantity_THEN_return_order_quantity Coverage Results" MODIFIED="1699795349051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_testGetAverageOrderQuantityByCustomer.ic" NAME="EngineTest.testGetAverageOrderQuantityByCustomer Coverage Results" MODIFIED="1699795240069" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$EngineTest_getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero.ic" NAME="EngineTest.getAverageOrderQuantityByCustomer_WhenNoOrders_ReturnsZero Coverage Results" MODIFIED="1699802225886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>domain.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Test$CommoditiesControllerTest.ic" NAME="CommoditiesControllerTest Coverage Results" MODIFIED="1698664788546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>controllers.*</FILTER>
     </SUITE>
   </component>
 </project>
