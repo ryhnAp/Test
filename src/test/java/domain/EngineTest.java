@@ -775,4 +775,111 @@ public class EngineTest {
         );
     }
 
+    @ParameterizedTest
+    @MethodSource("populateAddition")
+    void testAddition(int in1, int in2, int expected) {
+        Engine engine = new Engine();
+
+        assertEquals(expected, engine.add(in1, in2));
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateIsPositive")
+    void testIsPositive(int in, boolean expected) {
+        Engine engine = new Engine();
+
+        assertEquals(expected, engine.isPositive(in));
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateIsEqual")
+    void testIsEqual(int in1, int in2, boolean expected) {
+        Engine engine = new Engine();
+
+        assertEquals(expected, engine.isEqual(in1, in2));
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateCheckNumber")
+    void testCheckNumber(String expected, int in) {
+        Engine engine = new Engine();
+
+        assertEquals(expected, engine.checkNumber(in));
+    }
+
+    @ParameterizedTest
+    @MethodSource("populateSumAndMultiply")
+    void testSumAndMultiply(int in1, int in2, int expected) {
+        Engine engine = new Engine();
+
+        int result = engine.sumAndMultiply(in1, in2);
+        assertEquals(expected, result);
+    }
+
+    @org.junit.jupiter.api.Test
+    void testIsValid() {
+        Engine engine = new Engine();
+
+        assertTrue(engine.isValid());
+    }
+
+
+
+    private static Stream<Arguments> populateAddition() {
+        return Stream.of(
+                Arguments.of(2, 3, 5),
+                Arguments.of(0, 0, 0),
+                Arguments.of(-1, 0, -1),
+                Arguments.of(-1, -2, -3),
+                Arguments.of(2, -3, -1),
+                Arguments.of(-1, 1, 0),
+                Arguments.of(0, 1, 1)
+        );
+    }
+
+    private static Stream<Arguments> populateIsPositive() {
+        return Stream.of(
+                Arguments.of(1, true),
+                Arguments.of(0, false),
+                Arguments.of(-1, false),
+                Arguments.of(2, true)
+        );
+    }
+
+    private static Stream<Arguments> populateIsEqual() {
+        return Stream.of(
+                Arguments.of(1, 1, true),
+                Arguments.of(0, 0, true),
+                Arguments.of(-1, -1, true),
+                Arguments.of(1, 0, false),
+                Arguments.of(0, 1, false),
+                Arguments.of(-1, 0, false),
+                Arguments.of(0, -1, false),
+                Arguments.of(1, -1, false),
+                Arguments.of(-1, 1, false)
+        );
+    }
+
+    private static Stream<Arguments> populateCheckNumber() {
+        return Stream.of(
+                Arguments.of("Greater", 6),
+                Arguments.of("Lesser", 5),
+                Arguments.of("Lesser", 4),
+                Arguments.of("Lesser", 0),
+                Arguments.of("Lesser", -1)
+        );
+    }
+
+    private static Stream<Arguments> populateSumAndMultiply() {
+        return Stream.of(
+                Arguments.of(0, 0, 0),
+                Arguments.of(0, 1, 2),
+                Arguments.of(0, -1, -2),
+                Arguments.of(1, 0, 2),
+                Arguments.of(-1, 0, -2)
+        );
+    }
+
+
+
 }

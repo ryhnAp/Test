@@ -80,4 +80,37 @@ public class Engine {
         orderHistory.add(order);
         return quantity;
     }
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public boolean isPositive(int number) {
+        return number > 0;
+    }
+
+    public boolean isEqual(int a, int b) {
+        return a == b;
+    }
+
+    public boolean isValid() {
+        return true;
+    }
+
+
+    public String checkNumber(int a) {
+        if (a > 5) {
+            return "Greater";
+        }
+        return "Lesser";
+    }
+
+    public int sumAndMultiply(int a, int b) {
+        int sum = a + b;
+        return sum * 2;
+    }
+
+
+
+
 }

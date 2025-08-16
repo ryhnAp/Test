@@ -12,9 +12,10 @@
     <artifactId>CA1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <java.version>19</java.version>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <java.version>17</java.version>
+<!--        <maven.compiler.source>19</maven.compiler.source>-->
+<!--        <maven.compiler.target>19</maven.compiler.target>-->
+        <maven.compiler.release>17</maven.compiler.release>
     </properties>
     <dependencies>
         <dependency>
@@ -123,6 +124,11 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>5.1.0.4751</version>
+            </plugin>
 
             <plugin>
                 <groupId>org.pitest</groupId>
@@ -153,14 +159,14 @@
                     <excludedClasses>
                         <param>**.KatalonRecorder.*</param> <!-- Exclude the KatalonRecorder package -->
                     </excludedClasses>
-<!--                    <targetClasses>-->
-<!--                        <param>com.yourapp.*</param> &lt;!&ndash; Your actual classes for mutation testing &ndash;&gt;-->
-<!--                    </targetClasses>-->
+                    <!--                    <targetClasses>-->
+                    <!--                        <param>com.yourapp.*</param> &lt;!&ndash; Your actual classes for mutation testing &ndash;&gt;-->
+                    <!--                    </targetClasses>-->
                     <targetClasses>
-<!--                        <param>*</param>-->
+                        <!--                        <param>*</param>-->
                     </targetClasses>
                     <targetTests>
-<!--                        <param>*</param>-->
+                        <!--                        <param>*</param>-->
                     </targetTests>
                 </configuration>
             </plugin>
