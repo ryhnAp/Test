@@ -4,260 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="changes">
+    <list default="true" id="c55e4ff9-ed5a-4137-9d8f-cd159ff4d47f" name="Changes" comment="testing jenkins">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/AddBuyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/BuyList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/Credit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/GetCommodities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/Purchase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/PurchaseList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/KatalonRecorder/Signup.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/EngineTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application/BalootApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/AuthenticationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/BuyListController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CommentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/CommoditiesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/ProviderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controllers/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/DataParser$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/DataParser$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/DataParser$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/DataParser$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/DataParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/Database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/defines/Errors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Engine.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Order.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/AlreadyInBuyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/CommodityIsNotInBuyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/IncorrectPassword.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/InsufficientCredit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/InvalidCreditRange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/MissingCommodityId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/MissingUserId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/NotExistentComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/NotExistentCommodity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/NotExistentProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/NotExistentUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/NotInStock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exceptions/UsernameAlreadyTaken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Comment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Commodity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Provider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Baloot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/BuyListItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/application/BalootApplication.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/application/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/AuthenticationController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/BuyListController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/CommentController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/CommoditiesController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/ProviderController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/UserController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/controllers/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/database/DataParser.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/database/Database.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/database/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/domain/Engine.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/domain/Order.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/domain/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/model/Comment.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/model/Commodity.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/model/Provider.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/model/User.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/model/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/service/Baloot.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/service/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/utils/BuyListItem.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pit-reports/utils/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/application/BalootApplication.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/application/BalootApplication.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/application/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/application/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/AuthenticationController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/AuthenticationController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/BuyListController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/BuyListController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommentController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommentController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/CommoditiesController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/ProviderController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/ProviderController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/UserController.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/controllers/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser$1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser$2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser$3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser$4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/DataParser.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/Database.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/Database.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/database/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/defines/Errors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/defines/Errors.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/defines/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/defines/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Engine.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/Order.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/domain/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/AlreadyInBuyList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/AlreadyInBuyList.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/CommodityIsNotInBuyList.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/CommodityIsNotInBuyList.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/IncorrectPassword.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/IncorrectPassword.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/InsufficientCredit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/InsufficientCredit.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/InvalidCreditRange.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/InvalidCreditRange.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/MissingCommodityId.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/MissingCommodityId.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/MissingUserId.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/MissingUserId.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentComment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentComment.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentCommodity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentCommodity.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentProvider.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentProvider.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentUser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotExistentUser.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotInStock.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/NotInStock.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/UsernameAlreadyTaken.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/UsernameAlreadyTaken.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/exceptions/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchfc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchnc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/branchpc.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/bundle.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/class.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/down.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/greenbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/group.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/method.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/package.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/redbar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/report.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/session.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/source.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-resources/up.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Comment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Comment.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Commodity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Commodity.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Provider.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/Provider.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/User.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/model/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/service/Baloot.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/service/Baloot.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/service/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/service/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/utils/BuyListItem.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/utils/BuyListItem.java.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/utils/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/site/jacoco/utils/index.source.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.AuthenticationControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommentControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-controllers.CommoditiesControllerTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-domain.EngineTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommentTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.CommodityTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-model.UserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.AuthenticationControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommentControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/controllers.CommoditiesControllerTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/domain.EngineTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommentTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.CommodityTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/model.UserTest.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/behavior/add/addCreditTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/behavior/remove/removeItemFromBuyListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/behavior/withdraw/withdrawCreditTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/comment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/comments.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/commodities.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/commodity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/AuthenticationControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommentControllerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommentControllerTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommentControllerTest$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommentControllerTest$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommentControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/CommoditiesControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/controllers/UserControllerTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cucumber/addCredit.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cucumber/removeItemFromBuyList.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cucumber/withdrawCredit.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/EngineTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/domain/OrderTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/CommentTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/CommentTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/CommentTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/CommodityTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/CommodityTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/UserTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/UserTest$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/model/UserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/order1-1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/order1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/order2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/order3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ratingCommodity.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/addCreditTestRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/removeItemFromBuyListTestRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/runner/withdrawCreditTestRunner.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/users.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -569,7 +318,7 @@
       <workItem from="1729322278826" duration="842000" />
       <workItem from="1729544756603" duration="4553000" />
       <workItem from="1729565248065" duration="9323000" />
-      <workItem from="1755345028978" duration="3278000" />
+      <workItem from="1755345028978" duration="3974000" />
     </task>
     <task id="LOCAL-00001" summary="init project ta ca1 baloot">
       <created>1697385484368</created>
@@ -704,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1728780337619</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="testing jenkins">
+      <created>1755366858825</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1755366858825</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -959,7 +715,8 @@
     <MESSAGE value="ta merge is ok, swagger is ok" />
     <MESSAGE value="with jacoco and pit reports!" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="testing jenkins" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing jenkins" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test$withdrawCreditTestRunner.ic" NAME="withdrawCreditTestRunner Coverage Results" MODIFIED="1728367092734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
